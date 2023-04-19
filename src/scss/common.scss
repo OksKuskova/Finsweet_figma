@@ -1,1 +1,23 @@
-// Заголовки, общие БЕМ блоки и прочее...
+// Button ========================================================================
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 30px;
+	background-color: $yellow;
+	font-family: 'Sen';	
+	font-weight: 700;	
+	font-size: rem(18);
+	line-height: 1.333;
+	color: $black;
+	transition: background-color 0.3s ease 0s;
+	@media (min-width:$mobile){
+		padding: 16px 48px;
+	}
+	&_white {
+		background-color: $white;		
+	}
+	&:hover {
+		background-color: $hover;
+	}
+}
