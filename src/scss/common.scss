@@ -90,17 +90,78 @@
 			color: $hover;
 		}	
 	}
+}// For background image ========================================================================
+.ibg {
+	position: relative;	
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
 }
 // HEADINGS ========================================================================
-h2 {
+.title {
 	font-family: 'Sen';
 	font-weight: 700;
-	font-size: rem(28);
-	line-height: 1.333;
-	letter-spacing: -1px;	
 	color: $black;
-	@media (min-width:$mobile){
-		font-size: rem(36);	
+
+	&_h1 {
+		font-size: rem(36);
+		line-height: 1.333;
 		letter-spacing: -2px;
+		@media (min-width:$mobile){
+			font-size: rem(48);				
+		}
 	}
+	&_h2 {
+		font-size: rem(28);
+		line-height: 1.43;
+		letter-spacing: -1px;	
+		@media (min-width:$mobile){
+			font-size: rem(36);	
+			line-height: 1.333;
+			letter-spacing: -2px;
+		}
+	}
+	&_h3 {
+		font-size: rem(24);
+		line-height: 1.333;		
+		@media (min-width:$mobile){
+			font-size: rem(28);	
+			line-height: 1.43;
+			letter-spacing: -1px;
+		}
+	}
+}
+// TAG ========================================================================
+.tag {
+	font-weight: 600;	
+	line-height: 1.25;
+	letter-spacing: 3px;
+	text-transform: uppercase;	
+	color: $purple;	
+	&_black {
+		color: $black;
+	}
+}
+// INFO ========================================================================
+.info {
+	font-weight: 500;
+	font-size: rem(14);
+	line-height: 1.43;
+	color: $darkGrey;
+	a {
+		color:$purple;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color:$hover;
+		}
+	}
+}
+// TEXT ========================================================================
+.text {
+	line-height: 1.75;
 }

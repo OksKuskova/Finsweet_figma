@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__main-block main-block">
+				<div class="main-block__image ibg">
+					<img src="@img/main-block/man.png" alt="Image">
+				</div>
+				<div class="main-block__container">
+					<div class="main-block__content">
+						<div class="main-block__tag tag">Posted on <span>startup</span></div>
+						<h1 class="main-block__title title">Step-by-step guide to choosing great font pairs</h1>
+						<div class="main-block__info info">By <a href="">James West</a> | May 23, 2022 </div>
+						<div class="main-block__text text">Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</div>
+						<div class="main-block__action"><a href="" class="button">Read More ></a></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>
