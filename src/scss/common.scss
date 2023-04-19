@@ -40,7 +40,9 @@
 .menu {
 	flex: 1 1 auto;
 	display: flex;
-	justify-content: end;
+	@media (min-width:$mobile){
+		justify-content: end;
+	}	
 
 	&__body {
 		@media (max-width:$mobile){
@@ -63,6 +65,7 @@
 	&__list {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		column-gap: 24px;				
 		color: $white;		
 		font-weight: 400;		
