@@ -21,6 +21,13 @@
 		background-color: $hover;
 	}
 }
+.action {
+	display: flex;
+		flex-direction: column;
+		@media (min-width:$mobileSmall){
+			 flex-direction: row; 
+		}
+}
 // LOGO ========================================================================
 .logo {		
 	flex: 0 0 auto;		
@@ -135,16 +142,27 @@
 			letter-spacing: -1px;
 		}
 	}
+	&_h4 {
+		font-size: rem(20);
+		line-height: 1.333;	
+		@media (min-width:$mobile){
+			font-size: rem(24);			
+		}
+	}
 }
 // TAG ========================================================================
 .tag {
 	font-weight: 600;	
+	font-size: rem(14); 
 	line-height: 1.25;
 	letter-spacing: 3px;
 	text-transform: uppercase;	
 	color: $purple;	
 	&_black {
 		color: $black;
+	}
+	@media (min-width:$mobile){
+		font-size: initial;
 	}
 }
 // INFO ========================================================================
@@ -164,4 +182,13 @@
 // TEXT ========================================================================
 .text {
 	line-height: 1.75;
+}
+// LINK ========================================================================
+.link {
+	line-height: 1.75;
+	color: $purple;
+	transition: color 0.3s ease 0s;
+	&:hover {
+		color: $hover;
+	}
 }

@@ -5,15 +5,32 @@
 
 	&__main-block {
 		
-		padding: 50px 0px 192px 0px;
+		padding: 60px 0px 100px 0px;
 		@media (min-width:$mobile){
-			padding: 90px 0px 192px 0px;
+			padding: 90px 0px 160px 0px;
 		}
 		@media (min-width:$tablet){
 			padding: 128px 0px 192px 0px;
 		}
 	}
+	&__post {
+		padding: 50px 0px;
+		@media (min-width:$mobile){
+			padding: 70px 0px;
+		}
+		@media (min-width:$tablet){
+			padding: 100px 0px;
+		}
+		@media (min-width:1440px){
+			padding: 128px 0px; 
+		}
+	}
+	&__about {
+	}
 }
+//====================================================================================================
+// MAIN-BLOCK
+//====================================================================================================
 .main-block {
 	position: relative;
 	
@@ -23,10 +40,13 @@
 		height: 100%;
 		top: 0;
 		left: 0;		
-		img {
-			object-position: 30% -50px;			
-			@media (min-width:$mobile){
+		img {			
+			object-position: 26% 0px;			
+			@media (min-width:$tablet){
 				object-position: left;
+			}
+			@media (min-width:1310px){
+				object-position: initial;
 			}
 		}				
 	}
@@ -57,13 +77,8 @@
 			font-weight: 700;	
 		}
 		&:not(:last-child) {
-			margin-bottom: 14px;
-		}
-		@media (min-width:$mobile){
-			&:not(:last-child) {
-				margin-bottom: 24px;
-			}
-		}
+			margin-bottom: 24px;
+		}		
 	}
 
 	&__title {
@@ -72,13 +87,10 @@
 		letter-spacing: -2px;
 		color: $white;
 		&:not(:last-child) {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 		@media (min-width:$mobile){
 			font-size: rem(48);
-			&:not(:last-child) {
-				margin-bottom: 20px;
-			}
 		}
 		@media (min-width:$tablet){
 			font-size: rem(56);
@@ -95,34 +107,249 @@
 			color:$yellow;		
 		}
 		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-		@media (min-width:$mobile){
-			&:not(:last-child) {
-				margin-bottom: 20px;
-			}  
-		}
+			margin-bottom: 20px;
+		}		
 	}
 
 	&__text {
 		color: #FFFFFF;
 		max-width: 600px;
 		&:not(:last-child) {
-			margin-bottom: 30px;
-		}
-		@media (min-width:$mobile){
-			&:not(:last-child) {
-				margin-bottom: 48px;
-			}
-		}
+			margin-bottom: 48px;
+		}		
 	}
-	
+
 	&__action {
-		display: flex;
+		
 	}	
 }
 //====================================================================================================
-// PAGE
+// POST
 //====================================================================================================
+.post {
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		@media (min-width:$tablet){
+			flex-direction: row;
+			column-gap: 2.3%;
+		}		
+	}
+
+	&__featured {
+		flex: 0 1 57.3%;		
+	}
+
+	&__all {
+		flex: 0 1 40.4%;
+	}
+}
+.featured-post {	
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__body {
+		padding: 25px;
+		border: 1px solid rgba(109, 110, 118, 0.1);
+		background-color: $white;
+		@media (min-width:$mobile){
+			padding: 32px;
+		}
+	}
+
+	&__image {
+		padding-bottom: 52.21%;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+	&__content {
+	}
+}
+.content-block {
+
+	&__info {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__action {
+	}
+}
+
+.all-post {
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+		}		
+	}
+
+	&__title {
+	}
+
+	&__link {
+	}
+
+	&__body {
+		@media (max-width:$tablet){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		padding: 25px 25px 20px 25px;
+		background-color: $white;
+		transition: background-color 0.3s ease 0s;
+		@media (min-width:$mobile) and (max-width:$tablet){
+			  flex: 0 1 50%;
+		}		
+		&:hover {
+			background-color: $lightYellow;
+		}
+		@media (min-width:$tablet){
+			padding: 30px 30px 25px 30px;
+		}
+	}
+
+	&__info {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__title {
+		display: inline-block;		
+		@media (min-width:$tablet){
+			max-width: 370px;
+		}		
+	}
+}
+
+//====================================================================================================
+// ABOUT
+//====================================================================================================
+.about {
+
+	&__container {
+	}
+
+	&__color-line {
+	}
+
+	&__body {
+		padding: 50px 30px;
+		@media (min-width:$mobile){
+			padding: 80px 65px;
+		}
+		@media (min-width:1200px){
+			padding: 96px 80px;			  
+		}
+		
+	}
+}
+.color-line {
+	height: 23px;
+	display: flex;
+	justify-content: end;
+
+	&__yellow {
+		flex: 0 1 61%;
+		background-color: $yellow;
+	}
+
+	&__purple {
+		flex: 0 1 22%;
+		background-color: $purple;
+	}
+}
+.about-block {
+	background-color: $lavender;		
+	@media (min-width:$tablet){
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		column-gap: 40px;
+	}
+
+	&__column {
+		flex: 0 1 515px;
+		@media (max-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__tag {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+		
+	}
+
+	&__title {		
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		@media (min-width:$tablet){
+			max-width: 500px;
+		}
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			} 
+		}		
+	}
+
+	&__link {
+		font-family: 'Sen';
+		font-weight: 700;
+		font-size: rem(18);		
+	}
+
+	&__content {
+	}
+}
 
 //====================================================================================================
