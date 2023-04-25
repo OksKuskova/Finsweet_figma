@@ -23,10 +23,15 @@
 }
 .action {
 	display: flex;
-		flex-direction: column;
+	flex-direction: column;
+	@media (min-width:$mobileSmall){
+		flex-direction: row; 
+	}
+	&_center {
 		@media (min-width:$mobileSmall){
-			 flex-direction: row; 
+			justify-content: center; 
 		}
+	}
 }
 // LOGO ========================================================================
 .logo {		
