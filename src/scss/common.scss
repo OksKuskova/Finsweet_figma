@@ -115,10 +115,19 @@
 	}
 }
 // HEADINGS ========================================================================
+
 .title {
+	display: inline-block;
 	font-family: 'Sen';
 	font-weight: 700;
 	color: $black;
+
+	&_link {
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $hover;
+		}
+	}
 
 	&_h1 {
 		font-size: rem(36);
@@ -163,11 +172,14 @@
 	letter-spacing: 3px;
 	text-transform: uppercase;	
 	color: $purple;	
+	@media (min-width:$mobile){
+		font-size: initial;
+	}
 	&_black {
 		color: $black;
 	}
-	@media (min-width:$mobile){
-		font-size: initial;
+	&_fw500 {
+		font-weight: 500;	
 	}
 }
 // INFO ========================================================================
@@ -182,6 +194,9 @@
 		&:hover {
 			color:$hover;
 		}
+	}
+	span {
+		margin: 0 5px;
 	}
 }
 // TEXT ========================================================================
@@ -201,26 +216,31 @@
 .content-block {
 	&__tag {
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
+		@media (min-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__title {		
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}		
 	}
 
 	&__info {
 		&:not(:last-child) {
 			margin-bottom: 16px;
-		}
-	}
-
-	&__title {
-		&:not(:last-child) {
-			margin-bottom: 16px;
-		}
+		}		
 	}
 
 	&__text {
 		&:not(:last-child) {
 			margin-bottom: 32px;
-		}
+		}		
 	}
 
 	&__action {

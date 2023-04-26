@@ -25,87 +25,43 @@ import "../../scss/base/swiper.scss";
 
 // Ініціалізація слайдерів
 function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Navigation, Pagination],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 20,
-			autoHeight: true,
-			speed: 800,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
+	new Swiper('.reviews__slider', {
+		modules: [Navigation, Pagination],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoHeight: true,
+		speed: 800,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: false,
+		},
+		navigation: {
+			prevEl: '.reviews-button-prev',
+			nextEl: '.reviews-button-next',
+		},
+		on: {
 
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
-
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-				dynamicBullets: false,
-			},
-
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
-			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// Події
-			on: {
-
-			}
-		});
-	}
+		}
+	});
+	new Swiper('.posts-block__slider', {
+		modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoHeight: true,
+		speed: 800,
+		navigation: {
+			prevEl: '.posts-button-prev',
+			nextEl: '.posts-button-next',
+		}
+	});
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');

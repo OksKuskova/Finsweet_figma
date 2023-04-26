@@ -18,17 +18,17 @@ window['FLS'] = true;
 import "../scss/style.scss";
 
 
-const whyImage = document.getElementById('add-ibg');
-console.log(whyImage);
 
 window.addEventListener('resize', addIbg);
 function addIbg() {
-	console.log(window.innerWidth);
+	const whyImage = document.getElementById('add-ibg');
 	let windoWidth = window.innerWidth;
-	if (windoWidth > 991) {
-		whyImage.classList.add('ibg');
-	} else {
-		whyImage.classList.remove('ibg');
+	if (whyImage != undefined) {
+		if (windoWidth > 991) {
+			whyImage.classList.add('ibg');
+		} else {
+			whyImage.classList.remove('ibg');
+		}
 	}
 }
 
