@@ -13,7 +13,7 @@
 			padding: 128px 0px 192px 0px;
 		}
 	}
-	&__post, &__categories, &__join {	 
+	&__post, &__categories {	 
 		padding: 50px 0px;
 		@media (min-width:$mobile){
 			padding: 70px 0px;
@@ -265,7 +265,8 @@
 	&__container {
 	}
 
-	&__color-line {
+	&__color-line {		
+		justify-content: end;
 	}
 
 	&__body {
@@ -278,79 +279,8 @@
 		}		
 	}
 }
-.color-line {
-	height: 23px;
-	display: flex;
-	justify-content: end;
 
-	&__yellow {
-		flex: 0 1 61%;
-		background-color: $yellow;
-	}
 
-	&__purple {
-		flex: 0 1 22%;
-		background-color: $purple;
-	}
-}
-.about-block {
-	background-color: $lavender;		
-	@media (min-width:$tablet){
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		column-gap: 40px;
-	}
-
-	&__column {
-		flex: 0 1 515px;
-		@media (max-width:$tablet){
-			&:not(:last-child) {
-				margin-bottom: 30px;
-			}
-		}
-	}
-
-	&__tag {
-		&:not(:last-child) {
-			margin-bottom: 15px;
-		}
-		@media (min-width:$tablet){
-			&:not(:last-child) {
-				margin-bottom: 24px;
-			}
-		}		
-	}
-
-	&__title {		
-		&:not(:last-child) {
-			margin-bottom: 16px;
-		}
-		@media (min-width:$tablet){
-			max-width: 500px;
-		}
-	}
-
-	&__text {
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-		@media (min-width:$tablet){
-			&:not(:last-child) {
-				margin-bottom: 16px;
-			} 
-		}		
-	}
-
-	&__link {
-		font-family: 'Sen';
-		font-weight: 700;
-		font-size: rem(18);		
-	}
-
-	&__content {
-	}
-}
 //====================================================================================================
 // CATEGORIES
 //====================================================================================================
@@ -701,24 +631,9 @@
 		}
 	}
 
-	&__author {		
-		display: flex;				
-		column-gap: 16px;
+	&__author {				
 		max-width: 300px;
 	}
-
-	&__icon {
-	}
-
-	&__info {
-	}
-
-	&__name {
-	}
-
-	&__location {
-	}
-
 }
 	
 .swiper {	
@@ -781,11 +696,17 @@
 //====================================================================================================
 // JOIN
 //====================================================================================================
-.page {
-
-
-}
-.join {
+.join {	 
+	padding: 50px 0px;
+	@media (min-width:$mobile){
+		padding: 70px 0px;
+	}
+	@media (min-width:$tablet){
+		padding: 100px 0px;
+	}
+	@media (min-width:1440px){
+		padding: 128px 0px; 
+	}
 
 	&__container {
 	}

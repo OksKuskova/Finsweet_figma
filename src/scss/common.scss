@@ -116,13 +116,13 @@
 }
 // HEADINGS ========================================================================
 
-.title {
-	display: inline-block;
+.title {	
 	font-family: 'Sen';
 	font-weight: 700;
 	color: $black;
 
 	&_link {
+		display: inline-block;
 		transition: color 0.3s ease 0s;
 		&:hover {
 			color: $hover;
@@ -203,6 +203,21 @@
 .text {
 	line-height: 1.75;
 }
+// LIST ========================================================================
+.list {
+	font-family: 'Sen';	
+	font-weight: 700;
+	font-size: rem(20);
+	line-height: 1.33;
+	color: rgba(22, 23, 34, 0.78);	
+	@media (min-width:$mobile){
+		font-size: rem(24);
+	}		
+	&__item {		
+		list-style: disc inside;		
+	}
+}
+
 // LINK ========================================================================
 .link {
 	line-height: 1.75;
@@ -214,6 +229,16 @@
 }
 // Content-block ========================================================================
 .content-block {
+	p {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		@media (min-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			} 
+		}
+	}
 	&__tag {
 		&:not(:last-child) {
 			margin-bottom: 10px;
@@ -227,8 +252,13 @@
 
 	&__title {		
 		&:not(:last-child) {
-			margin-bottom: 16px;
+			margin-bottom: 12px;
 		}		
+		@media (min-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			} 
+		}
 	}
 
 	&__info {
@@ -274,7 +304,7 @@
 	&__item {		
 	}
 }
-// Items-social ========================================================================
+// Item-social ========================================================================
 .item-social {
 	svg {
 		width: 16px;
@@ -291,5 +321,117 @@
 		svg {			
 			fill: $mainColor;				
 		}
+	}
+}
+// Author ========================================================================
+.author {
+	display: flex;				
+	column-gap: 16px;
+
+	&__icon {
+	}
+
+	&__info {
+	}
+
+	&__name {
+		&_purple {
+			color: rgba(89, 46, 169, 0.87);
+		}
+	}
+
+	&__location {
+	}
+	&__data {
+
+	}
+}
+// Color-line ========================================================================
+.color-line {
+	display: flex;
+	height: 23px;
+
+	&_yellow {		
+		background-color: $yellow;
+	}
+	&_61 {
+		flex: 0 1 61%;
+	}
+	&_47 {
+		flex: 0 1 60%;
+		@media (min-width:$tablet){
+			flex: 0 1 47%;
+		}
+	}
+
+	&_purple {		
+		background-color: $purple;
+	}
+	&_22 {
+		flex: 0 1 22%;
+	}
+	&_27 {
+		flex: 0 1 40%;
+		@media (min-width:$tablet){
+			flex: 0 1 27%;
+		}
+	}
+}
+// About-block ========================================================================
+.about-block {
+	background-color: $lavender;		
+	@media (min-width:$tablet){
+		display: flex;		
+		justify-content: space-between;
+		column-gap: 32px;
+	}
+
+	&__column {
+		flex: 0 1 515px;
+		@media (max-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__tag {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}		
+	}
+
+	&__title {		
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		@media (min-width:$tablet){
+			max-width: 500px;
+		}
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			} 
+		}		
+	}
+
+	&__link {
+		font-family: 'Sen';
+		font-weight: 700;
+		font-size: rem(18);		
+	}
+
+	&__content {
 	}
 }

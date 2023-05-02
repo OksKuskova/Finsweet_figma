@@ -1,0 +1,313 @@
+//====================================================================================================
+// ABOUT-PAGE
+//====================================================================================================
+.about-page {
+
+	&__main-about {
+		@media (max-width:$tablet){
+			padding: 50px 0px 30px;	
+		}	
+	}
+	&__statistics {
+		margin-top: 0px;
+		@media (min-width:660px){
+			margin-top: -63px;
+		}		
+	}
+	&__concept, &__our-team, &__why-started {	 
+		padding: 0px 0px 50px 0px; 
+		@media (min-width:$mobile){
+			padding: 0px 0px 70px 0px;
+		}
+		@media (min-width:$tablet){
+			padding: 0px 0px 100px 0px;
+		}
+		@media (min-width:1440px){
+			padding: 0px 0px 128px 0px; 
+		}
+	}
+}
+//====================================================================================================
+// MAIN-ABOUT
+//====================================================================================================
+.main-about {		
+
+	&__container {		
+	}
+
+	&__body {
+		background-color: $white;
+		padding: 0px;	
+		@media (min-width:660px) and (max-width:$tablet){
+			margin: 0px 15px 0px 50px;			
+			position: relative;
+			z-index: 2;
+		}
+		@media (min-width:660px){
+			padding: 20px 64px 64px 64px;
+		}		
+		@media (min-width:$tablet){
+			padding: 40px 22px 0px 50px;
+		}
+		@media (min-width:1200px){
+			padding: 80px 32px 0px 109px;
+		}	
+		@media (min-width:$tablet){
+			display: flex;
+			align-items: center;
+			column-gap: 3%;				
+		}		
+		& > * {
+			@media (max-width:$mobile){
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}		
+			}			
+			@media (min-width:$mobile) and (max-width:$tablet){
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				} 
+			}	
+		}
+	}
+
+	&__heading {
+		flex: 0 0 55%;			
+		background-color: $white;
+		z-index: 2;
+		padding: 0px;		
+		@media (min-width:$tablet){
+			padding: 64px;
+			min-width: 550px;
+		}		
+	}
+
+	&__tag {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (min-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__title {			
+	}
+
+	&__text {
+		flex: 0 1 42%;
+	}
+}
+
+//====================================================================================================
+// STATISTICS
+//====================================================================================================
+
+.statistics {
+
+	&__container {
+		
+	}
+	&__body {
+		position: relative;
+		@media (min-width:$mobileSmall){
+			padding: 50px 15px; 
+		}		
+		@media (min-width:580px){
+			padding: 265px 15px 0px 50px;
+		}		
+		@media (min-width:1200px){
+			padding: 265px 15px 0px 109px;  
+		}			
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;	
+	}
+
+	&__line {	
+		margin: 0px;		
+		@media (min-width:580px){
+			margin: 0px 14px 0px 7px;
+		}		
+	}
+
+	&__color-line {
+		margin-top: -1px;			
+	}
+}
+
+.line-statistics {			
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	background-color: rgba(255, 208, 80, 0.75);
+	padding: 22px 31px;
+	@media (min-width:$mobileSmall){
+		max-width: 210px;
+		background-color: $yellow;
+	}
+	@media (min-width:580px){
+		max-width: 630px;	
+		flex-direction: row;				
+	}	
+	@media (min-width:$mobile){
+		padding: 32px 41px;
+	}
+
+	&__item {			
+		flex: 1 1 auto;
+		color: $black;
+		@media (max-width:$mobileSmall){
+			text-align: center;		  
+		}
+		@media (min-width:580px){
+			&:not(:last-child) {
+				padding-right: 10px;
+			}
+		}				
+	}
+
+	&__value {
+		font-family: 'Sen';
+		font-weight: 700;
+		font-size: rem(48);
+		line-height: 1.14;
+		letter-spacing: -2px;
+		@media (min-width:$mobile){
+			font-size: rem(56);
+		}
+	}
+
+	&__text {
+	}
+}
+
+//====================================================================================================
+// CONCEPT
+//====================================================================================================
+
+.concept {
+
+	&__container {
+	}
+
+	&__body {
+		padding: 50px 30px;
+		@media (min-width:$mobile){
+			padding: 80px 65px;
+		}
+		@media (min-width:$tablet){
+			padding: 128px 98px 64px;
+		}
+	}
+}
+
+//====================================================================================================
+// OUR-TEAM
+//====================================================================================================
+
+.our-team {
+
+	&__container {		
+		display: flex;
+		flex-direction: column;
+		align-items: center;	
+		row-gap: 30px;
+		@media (min-width:$tablet){		
+			flex-direction: row;	
+			justify-content: space-between;					  
+		}		
+	}
+
+	&__content {
+		@media (min-width:$tablet){
+			flex: 0 1 586px;
+			padding: 0px 67px 0px 0px;
+		}		
+	}
+
+	&__image {		
+		position: relative;
+		display: inline-flex;		
+		@media (min-width:$tablet){
+			justify-content: end;
+		}
+		img {
+			max-width: 100%;
+		}
+		&::before {
+			content: '';
+			display: none;
+			@media (min-width:$mobile){	
+				display: block;			
+				position: absolute;
+				width: 16.5%;
+				height: 24.2%;
+				top: 23.75%;
+				left: -9.13%;
+				background-color: $yellow;
+				border-top-left-radius: 40%;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+// WHY-STARTED
+//====================================================================================================
+
+.why-started {
+
+	&__container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;	
+		row-gap: 30px;
+		@media (min-width:$tablet){		
+			flex-direction: row;	
+			column-gap: 64px;							  
+		}		
+	}
+
+	&__column {
+		flex: 0 1 50%;
+	}
+
+	&__image {
+		position: relative;
+		img {
+			max-width: 100%;
+		}
+		&::before {
+			content: '';
+			display: none;			
+			display: block;			
+			position: absolute;
+			width: 11.9%;
+			height: 15.4%;
+			bottom: -7.7%;
+			left: 17.15%;
+			background-color: $purple;
+			border-radius: 50%;			
+		}
+	}
+
+	&__content {
+		@media (min-width:$tablet){
+			max-width: 519px;  
+		}		
+	}
+}
+
