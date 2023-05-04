@@ -1,0 +1,141 @@
+//====================================================================================================
+// AUTHOR-PAGE
+//====================================================================================================
+.author-page {
+
+	&__main {
+		padding: 70px 0px;		
+		@media (min-width:$tablet){
+			padding: 100px 0px;
+		}
+		@media (min-width:1440px){
+			padding: 128px 0px; 
+		}
+	}
+	&__my-post {
+		padding: 50px 0px;
+		@media (min-width:$mobile){
+			padding: 70px 0px;
+		}
+		@media (min-width:$tablet){
+			padding: 100px 0px;
+		}
+		@media (min-width:1440px){
+			padding: 128px 0px; 
+		}
+	}
+}
+//====================================================================================================
+// MAIN-AUTHOR
+//====================================================================================================
+.main-author {
+	position: relative;
+	background-color: $lavender;
+
+	&__container {
+	}
+
+	&__body {
+		max-width: 1024px;
+		margin: 0px auto;
+
+		@media (min-width:$mobile){
+			display: flex;
+			align-items: center;
+			column-gap: 32px;
+		}		
+	}
+
+	&__image {
+		flex: 0 1 251px;
+		align-self: flex-start;		
+		@media (max-width:$mobile){
+			 &:not(:last-child) {
+				margin-bottom: 24px;
+			 } 
+		}		
+		img {
+			max-width: 100%;
+			box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+		}
+	}
+
+	&__content {
+		flex: 0 1 670px;
+		
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+			@media (min-width:$mobile){
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				} 
+			}
+		}
+	}
+
+	&__title {
+		@media (max-width:$tablet){
+			font-size: rem(36);
+		}
+	}
+
+	&__text {		
+	}
+
+	&__social {
+	}
+
+	&__line {
+		position: absolute;
+		max-width: 1024px;	
+		width: calc(100% - 30px);
+		bottom: 0;		
+	}
+}
+
+//====================================================================================================
+// MY-POST
+//====================================================================================================
+
+.my-post {
+
+	&__container {
+	}
+
+	&__body {
+		max-width: 1024px;
+		margin: 0px auto;
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+		@media (min-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: 44px;
+			} 
+		}
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 64px;
+			}
+		}
+	}
+
+	&__content {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 44px;
+		}		
+		@media (min-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 64px;
+			}
+		}
+	}
+}
