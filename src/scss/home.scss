@@ -323,14 +323,7 @@
 		border: 1px solid $yellow;
 	}
 
-	&__icon {		
-		width: 48px;
-		height: 48px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10px;
-		background: $lightYellow;
+	&__icon {				
 		&:not(:last-child) {
 			margin-bottom: 16px;
 		}

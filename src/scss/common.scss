@@ -129,6 +129,16 @@
 		}
 	}
 
+	&_display {
+		font-size: rem(48);
+		line-height: 1.333;
+		letter-spacing: -2px;
+		@media (min-width:$mobile){
+			font-size: rem(56);
+			line-height: 1.14;
+		}
+	}
+
 	&_h1 {
 		font-size: rem(36);
 		line-height: 1.333;
@@ -435,3 +445,115 @@
 	&__content {
 	}
 }
+// Icon-category ========================================================================
+
+.icon-category {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background: $lightYellow;
+}
+
+// Post-item ========================================================================
+
+.post-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 32px;
+	@media (min-width:$mobile) {
+		column-gap: 2.5%;
+	}
+	&_mw838 {
+		@media (min-width:$mobile){
+			padding-right: 20px;
+			max-width: 858px;
+		}		
+	}
+
+	&__image {
+		flex: 1 1 100%;
+		padding: 0px 0px 64.047% 0px;	
+		align-self: flex-start; 
+		@media (min-width:$mobile){			
+			flex: 0 1 38.3%;
+			padding: 0px 0px 24.844% 0px;
+		}
+		@media (min-width:$tablet){
+			 align-self: auto; 
+		}		
+		img {
+			box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));			
+		}
+		&_small {
+			flex: 1 1 100%;
+			padding: 0px 0px 64.047% 0px;	
+			align-self: flex-start; 
+			@media (min-width:$mobile){			
+				flex: 0 1 35%;
+				padding: 0px 0px 37.24% 0px;
+			}
+		}		
+	}
+	&__body {
+		flex: 1 1 100%;
+		@media (min-width:$mobile){				
+			flex: 0 1 59.2%;		
+		}
+		&_small {
+			flex: 1 1 100%;
+			@media (min-width:$mobile){				
+				flex: 0 1 61%;		
+			}
+		}
+	}
+
+	&__content {
+		@media (min-width:$mobile){				
+			max-width: 624px;		
+		}		
+	}
+	
+
+	&__tag {
+		font-size: rem(14);
+		&:not(:last-child) {			
+			margin-bottom: 12px;
+		}
+		@media (min-width:$tablet){
+			font-size: initial;
+			&:not(:last-child) {			
+				margin-bottom: 20px;
+			}
+		}		
+	}
+
+	&__title {
+		font-size: rem(24);
+		line-height: 1.333;	
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}	
+		@media (min-width:$mobile){
+			font-size: rem(28);
+			line-height: 1.43;
+			letter-spacing: -1px;				
+		}
+		@media (min-width:$tablet){
+			font-size: rem(36);	
+			line-height: 1.333;
+			letter-spacing: -2px;
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}				
+		}
+	}
+
+	&__text {
+	}
+}
+
