@@ -23,7 +23,7 @@ body::after {
 	padding: 30px 10px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
-	pointer-events: none;
+	pointer-events: none;		
 }
 .popup_show {
 	z-index: 150;
@@ -37,12 +37,10 @@ body::after {
 }
 .popup__wrapper {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: column;	
 	min-height: 100%;
 	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
+	width: 100%;	
 	justify-content: center;
 	align-items: center;
 }
@@ -50,12 +48,52 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: $white;	
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 800px;
+	border-radius: 2px;
+	position: relative;
 	.lock & {
 		visibility: visible;
 	}
+}
+.popup__close {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	font-size: rem(18);
+	line-height: 1;
+	padding: 5px;
+	@media (min-width:$mobile){
+		font-size: rem(22);  
+	}
+
+}
+.popup__body {
+	padding: 40px 20px;	
+	@media (min-width:$mobile){
+		padding: 55px 64px;
+	}
+
+}
+.popup__title {	
+	font-size: rem(28);
+	line-height: 1.43;
+	letter-spacing: -1px;	
+	@media (min-width:530px){
+		font-size: rem(36);	
+		line-height: 1.333;
+		letter-spacing: -2px;
+	}
+	text-align: center;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	// @media (max-width:$mobile){
+	// 	max-width: 500px;
+	// 	margin: 0px auto;
+	// }
+}
+.popup__email-form .email-form__input {
+	flex: 0 1 auto;
 }

@@ -230,6 +230,7 @@
 	}
 
 	&__item {
+		display: block;
 		padding: 25px 25px 20px 25px;
 		background-color: $white;
 		transition: background-color 0.3s ease 0s;
@@ -244,13 +245,13 @@
 		}
 	}
 
-	&__info {
+	&__info {		
 		&:not(:last-child) {
 			margin-bottom: 8px;
 		}
 	}
 
-	&__title {				
+	&__title {						
 		@media (min-width:$tablet){
 			max-width: 370px;
 		}		
@@ -379,7 +380,7 @@
 		background-color: $white;
 		@media (min-width:$tablet){
 			flex: 0 0 706px;
-			margin: 121px 0px 0px 0px;
+			margin: 121px 0px -1px 0px;
 			padding: 80px;
 			position: relative;
 			z-index: 2;

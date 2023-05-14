@@ -115,7 +115,7 @@
 		@media (min-width:$mobileSmall){
 			padding: 50px 15px; 
 		}		
-		@media (min-width:580px){
+		@media (min-width:600px){
 			padding: 265px 15px 0px 50px;
 		}		
 		@media (min-width:1200px){
@@ -138,7 +138,7 @@
 
 	&__line {	
 		margin: 0px;		
-		@media (min-width:580px){
+		@media (min-width:600px){
 			margin: 0px 14px 0px 7px;
 		}		
 	}
@@ -158,7 +158,7 @@
 		max-width: 210px;
 		background-color: $yellow;
 	}
-	@media (min-width:580px){
+	@media (min-width:600px){
 		max-width: 630px;	
 		flex-direction: row;				
 	}	
@@ -172,7 +172,7 @@
 		@media (max-width:$mobileSmall){
 			text-align: center;		  
 		}
-		@media (min-width:580px){
+		@media (min-width:600px){
 			&:not(:last-child) {
 				padding-right: 10px;
 			}
@@ -244,8 +244,10 @@
 		@media (min-width:$tablet){
 			justify-content: end;
 		}
+		
 		img {
 			max-width: 100%;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
 		&::before {
 			content: '';
@@ -289,6 +291,7 @@
 		position: relative;
 		img {
 			max-width: 100%;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
 		&::before {
 			content: '';

@@ -1,9 +1,15 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close">✖</button>
+			<div class="popup__body">
+				<h2 class="popup__title title">Subscribe to our news letter to get latest updates and news
+				</h2>
+				<form action="#" class="popup__email-form email-form">
+					<input type="text" name="email" class="email-form__input input" data-validate data-required="email"
+						placeholder="Enter Your Email">
+					<button type="submit" class="email-form__button button">Subscribe</button>
+				</form>
 			</div>
 		</div>
 	</div>

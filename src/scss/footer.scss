@@ -8,25 +8,30 @@
 	@media (min-width:$tablet){
 		padding: 55px 0px;
 	}
-	
-	&__column {
-		display: flex;
-		flex-direction: column;
-		row-gap: 10px;
-		
+
+	&__container > * {
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
-		@media (min-width:$mobile){
-			 flex-direction: row; 
-			 align-items: center;
-			 &:not(:last-child) {
-				margin-bottom: 45px;
-			}
-		}
+		@media (min-width:$mobile){			
+			&:not(:last-child) {
+			  margin-bottom: 45px;
+		  }
+	  }
+	}
+	
+	&__top {
+		
 	}
 }
-.footer-top {
+.top-footer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;		
+		@media (min-width:$mobile){
+			 flex-direction: row; 
+			 align-items: center;			
+		}
 
 	&__logo {
 	}
@@ -35,30 +40,37 @@
 	}
 }
 
-.footer-body {	
-	flex-direction: column;
-	row-gap: 20px;	
+.body-footer {		
 	padding: 40px 20px;
 	background-color: rgba(255, 255, 255, 0.05);
 	@media (min-width:$mobile){
 		padding: 55px 64px;
 	}
-	@media (min-width:1170px){		 
+	@media (min-width:1170px){		
+		display: flex;		
 		flex-direction: row;
+		align-items: center;
 		column-gap: 60px;
 		padding: 80px 64px;
 	}
 
-	&__title {
-		flex: 0 1 50%;
+	&__title {	
 		color: $white;
 		@media (max-width:1170px){
 			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		@media (min-width:1170px) {
+			flex: 0 1 50%;
 		}
 	}
 
 	&__email-form {
-		flex: 0 1 50%;
+		@media (min-width:1170px) {
+			flex: 0 1 50%;
+		}
 	}
 }
 .email-form {
@@ -70,14 +82,17 @@
 		width: auto;
 		flex-direction: row;	
 		column-gap: 24px;	
+		justify-content: center;
  	}
 
-		&__input {
-			flex: 1 1 auto;			
+		&__input {						
 			background-color: inherit;
 			border: 1px solid $darkGrey;
 			padding: 14px 25px;
 			color: $white;
+			@media (min-width:1170px) {
+				flex: 1 1 auto;
+			}
 			&::placeholder {
 					line-height: 1.75;
 			}
@@ -86,23 +101,32 @@
 		&__button {
 		}
 }
-
-.footer-bottom {
-	justify-content: space-between;
-	align-items: center;
-	@media (max-width:$mobile){
-		text-align: center;
-	}
+.bottom-footer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;	
+	align-items: center;	
+	text-align: center;
+	
+		@media (min-width:$mobileSmall){
+			 flex-direction: row; 
+			 justify-content: space-between;			
+			 text-align: left;			
+		}
 	
 	&__info {
 		color: rgba(255, 255, 255, 0.7);
 		font-style: normal;		
 		line-height: 1.75;	
+		padding-right: 0px;
 		a {			
 			transition: color 0.3s ease 0s;
 			&:hover {
 				color: $hover;
 			}
+		}
+		@media (min-width:$mobileSmall){
+			padding-right: 20px;
 		}
 	}
 

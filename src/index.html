@@ -9,8 +9,8 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<section class="page__main-block main-block">
-				<div class="main-block__image ibg">
-					<img src="@img/main-block/man.png" alt="Image">
+				<div class="main-block__image -ibg">
+					<img data-src="@img/main-block/man.png" alt="Image">
 				</div>
 				<div class="main-block__container">
 					<div class="main-block__content">
@@ -34,8 +34,8 @@
 					<div class="post__featured featured-post">
 						<h2 class="featured-post__title title title_h2">Featured-post</h2>
 						<div class="featured-post__body">
-							<div class="featured-post__image ibg">
-								<img src="@img/post/featured_post.jpg" alt="Image">
+							<div class="featured-post__image -ibg">
+								<img data-src="@img/post/featured_post.jpg" alt="Image">
 							</div>
 							<div class="featured-post__content content-block">
 								<div class="content-block__info info">By <a href="author.html">John Doe</a> <span>|</span> May
@@ -59,32 +59,37 @@
 					<div class="post__all all-posts">
 						<div class="all-posts__header">
 							<h2 class="all-posts__title title title_h2">All Posts</h2>
-							<a href="" class="all-posts__link link">View All</a>
+							<a href="blog.html#allPosts" class="all-posts__link link">View All</a>
 						</div>
 						<div class="all-posts__body">
 							<div class="all-posts__item">
 								<div class="all-posts__info info">By <a href="author.html">John Deo</a> <span>|</span> Aug 23,
 									2021 </div>
-								<a href="" class="all-posts__title title title_h4">8 Figma design systems that you can download
+								<a href="blog-post.html" class="all-posts__title title title_h4">8 Figma design
+									systems that you
+									can download
 									for free today. 8 Figma design systems that you can download
 									for free today. </a>
 							</div>
 							<div class="all-posts__item">
 								<div class="all-posts__info info">By <a href="author.html">John Deo</a> <span>|</span> Aug 23,
 									2021 </div>
-								<a href="" class="all-posts__title title title_h4">8 Figma design systems that you can download
+								<a href="blog-post.html" class="all-posts__title title title_h4">8 Figma design systems that you
+									can download
 									for free today.</a>
 							</div>
 							<div class="all-posts__item">
 								<div class="all-posts__info info">By <a href="author.html">John Deo</a> <span>|</span> Aug 23,
 									2021 </div>
-								<a href="" class="all-posts__title title title_h4">8 Figma design systems that you can download
+								<a href="blog-post.html" class="all-posts__title title title_h4">8 Figma design systems that you
+									can download
 									for free today.</a>
 							</div>
 							<div class="all-posts__item">
 								<div class="all-posts__info info">By <a href="author.html">John Deo</a> <span>|</span> Aug 23,
 									2021 </div>
-								<a href="" class="all-posts__title title title_h4">8 Figma design systems that you can download
+								<a href="blog-post.html" class="all-posts__title title title_h4">8 Figma design systems that you
+									can download
 									for free today.</a>
 							</div>
 						</div>
@@ -106,7 +111,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 									labore et dolore magna aliqua.</p>
 							</div>
-							<a href="" class="about-block__link link">Read More &gt;</a>
+							<a href="about-us.html" class="about-block__link link">Read More &gt;</a>
 						</div>
 						<div class="about-block__column">
 							<div class="about-block__tag tag">Our mision</div>
@@ -175,7 +180,7 @@
 			<section class="page__why why">
 				<div class="why__container">
 					<div class="why__image" id="add-ibg">
-						<img src="@img/why/whyWeStarted.jpg" alt="Image">
+						<img data-src="@img/why/whyWeStarted.jpg" alt="Image">
 					</div>
 					<div class="why__body">
 						<div class="why__tag tag">Why we started </div>
@@ -190,7 +195,8 @@
 									laboris nisi ut aliquip.
 								</p>
 							</div>
-							<div class="content-block__action action"><a href="" class="button">Discover our story &gt;</a>
+							<div class="content-block__action action"><a href="about-us.html" class="button">Discover our story
+									&gt;</a>
 							</div>
 						</div>
 					</div>
@@ -210,22 +216,22 @@
 									<div class="authors-item__position">Content Writer @Company</div>
 								</div>
 								<div class="authors-item__social social">
-									<a href="author.html" class="social__item item-social">
+									<a href="https://www.facebook.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Facebook"></use>
 										</svg>
 									</a>
-									<a href="author.html" class="social__item item-social">
+									<a href="https://twitter.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Twitter"></use>
 										</svg>
 									</a>
-									<a href="author.html" class="social__item item-social">
+									<a href="https://www.instagram.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Instagram"></use>
 										</svg>
 									</a>
-									<a href="author.html" class="social__item item-social">
+									<a href="https://www.linkedin.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#LinkedIn"></use>
 										</svg>
@@ -245,22 +251,22 @@
 										pariatur.</div>
 								</div>
 								<div class="authors-item__social social">
-									<a href="" class="social__item item-social">
+									<a href="https://www.facebook.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Facebook"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://twitter.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Twitter"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.instagram.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Instagram"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.linkedin.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#LinkedIn"></use>
 										</svg>
@@ -278,22 +284,22 @@
 									<div class="authors-item__position">Content Writer @Company</div>
 								</div>
 								<div class="authors-item__social social">
-									<a href="" class="social__item item-social">
+									<a href="https://www.facebook.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Facebook"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://twitter.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Twitter"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.instagram.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Instagram"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.linkedin.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#LinkedIn"></use>
 										</svg>
@@ -311,22 +317,22 @@
 									<div class="authors-item__position">Content Writer @Company</div>
 								</div>
 								<div class="authors-item__social social">
-									<a href="" class="social__item item-social">
+									<a href="https://www.facebook.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Facebook"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://twitter.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Twitter"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.instagram.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#Instagram"></use>
 										</svg>
 									</a>
-									<a href="" class="social__item item-social">
+									<a href="https://www.linkedin.com/" target="_blank" class="social__item item-social">
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#LinkedIn"></use>
 										</svg>
@@ -334,7 +340,6 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</section>
@@ -471,13 +476,15 @@
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 							</p>
 						</div>
-						<div class="content-block__action action action_center"><a href="" class="button">Join Now</a></div>
+						<div class="content-block__action action action_center"><a href="form-contact.html"
+								class="button">Join Now</a></div>
 					</div>
 				</div>
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

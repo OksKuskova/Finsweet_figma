@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="contact-page">
+			<section class="contact-page__main main-contact">
+				<div class="main-contact__container">
+					<div class="main-contact__body">
+						<div class="main-contact__header">
+							<div class="main-contact__tag tag tag_black tag_fw900">Contact us</div>
+							<h1 class="main-contact__title title title_h1">Let’s Start a Conversation</h1>
+							<div class="main-contact__text text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim.</p>
+							</div>
+						</div>
+						<div class="main-contact__card contact-card">
+							<div class="contact-card__column contact-card__column_1">
+								<div class="contact-card__heading">Working hours</div>
+								<div class="contact-card__info">Monday To Friday<br>9:00 AM to 8:00 PM</div>
+								<div class="contact-card__text text">Our Support Team is available 24/7</div>
+							</div>
+							<div class="contact-card__column contact-card__column_2">
+								<div class="contact-card__heading">Contact Us</div>
+								<a href="tel:02079932905" class="contact-card__info title_link">020 7993 2905</a><br>
+								<a href="mailto:hello@finsweet.com"
+									class="contact-card__text text title_link">hello@finsweet.com</a>
+							</div>
+						</div>
+						<form action="#" class="main-contact__form contact-form">
+							<input type="text" name="username" class="contact-form__input input" placeholder="Full Name"
+								data-validate data-required>
+							<input type="text" name="email" class="contact-form__input input" placeholder="Your Email"
+								data-validate data-required="email">
+							<select name="form[]" data-class-modif="form" data-show-selected multiple data-tags id="query">
+								<option value="">Query Related </option>
+								<option value="one reason">One reason</option>
+								<option value="one reason">Another reason</option>
+							</select>
+							<textarea name="message" id="message" class="contact-form__input input"
+								placeholder="Message"></textarea>
+							<button type="submit" class="contact-form__button button">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -25,9 +25,9 @@ function addIbg() {
 	let windoWidth = window.innerWidth;
 	if (whyImage != undefined) {
 		if (windoWidth > 991) {
-			whyImage.classList.add('ibg');
+			whyImage.classList.add('-ibg');
 		} else {
-			whyImage.classList.remove('ibg');
+			whyImage.classList.remove('-ibg');
 		}
 	}
 }
@@ -89,7 +89,7 @@ flsFunctions.menuInit();
 Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -104,15 +104,15 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
-*/
+
 /* Отправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();
@@ -121,7 +121,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль роботы с календарем */
 // import './files/forms/datepicker.js'
@@ -180,7 +180,7 @@ import "./files/sliders.js";
 // Документація по роботі у шаблоні: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
 // Документація плагіна: https://github.com/verlok/vanilla-lazyload
 // Сніппет(HTML):
-// import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // Спостерігач за об'єктами з атрибутом data-watch
 // Документація: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html

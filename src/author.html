@@ -12,7 +12,7 @@
 				<div class="main-author__container">
 					<div class="main-author__body">
 						<div class="main-author__image">
-							<img src="@img/authors/photo.png" alt="Photo">
+							<img data-src="@img/authors/photo.png" alt="Photo">
 						</div>
 						<div class="main-author__content">
 							<h1 class="main-author__title title title_h1">Hey there, I’m Andrew Jonhson and welcome to my Blog
@@ -21,22 +21,22 @@
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
 								Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.</div>
 							<div class="main-author__social social">
-								<a href="" class="social__item item-social">
+								<a href="https://www.facebook.com/" target="_blank" class="social__item item-social">
 									<svg>
 										<use xlink:href="@img/icons/icons.svg#Facebook"></use>
 									</svg>
 								</a>
-								<a href="" class="social__item item-social">
+								<a href="https://twitter.com/" target="_blank" class="social__item item-social">
 									<svg>
 										<use xlink:href="@img/icons/icons.svg#Twitter"></use>
 									</svg>
 								</a>
-								<a href="" class="social__item item-social">
+								<a href="https://www.instagram.com/" target="_blank" class="social__item item-social">
 									<svg>
 										<use xlink:href="@img/icons/icons.svg#Instagram"></use>
 									</svg>
 								</a>
-								<a href="" class="social__item item-social">
+								<a href="https://www.linkedin.com/" target="_blank" class="social__item item-social">
 									<svg>
 										<use xlink:href="@img/icons/icons.svg#LinkedIn"></use>
 									</svg>
@@ -56,13 +56,14 @@
 						<h2 class="my-post__title title title_h1">My Posts</h2>
 						<div class="my-post__content">
 							<div class="my-post__item post-item">
-								<a href="" class="post-item__image post-item__image_author ibg">
-									<img src="@img/posts-block/stained-glass-high-rise-building.png" alt="Image">
+								<a href="blog-post.html" class="post-item__image post-item__image_author -ibg">
+									<img data-src="@img/posts-block/stained-glass-high-rise-building.png" alt="Image">
 								</a>
 								<div class="post-item__body post-item__body_author">
 									<div class="post-item__content">
 										<div class="post-item__tag tag">BUSINESS</div>
-										<a href="" class="post-item__title title title_link">Font sizes in UI design: The complete
+										<a href="blog-post.html" class="post-item__title title title_link">Font sizes in UI
+											design: The complete
 											guide to follow</a>
 										<div class="post-item__text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -70,14 +71,15 @@
 								</div>
 							</div>
 							<div class="my-post__item post-item">
-								<a href="" class="post-item__image post-item__image_author ibg">
-									<img src="@img/posts-block/man-in-black-crew-neck-t-shirt-sitting-beside-woman.png"
+								<a href="blog-post.html" class="post-item__image post-item__image_author -ibg">
+									<img data-src="@img/posts-block/man-in-black-crew-neck-t-shirt-sitting-beside-woman.png"
 										alt="Image">
 								</a>
 								<div class="post-item__body post-item__body_author">
 									<div class="post-item__content">
 										<div class="post-item__tag tag">ECONOMY</div>
-										<a href="" class="post-item__title title title_link">How to build rapport with your web
+										<a href="blog-post.html" class="post-item__title title title_link">How to build rapport
+											with your web
 											design clients</a>
 										<div class="post-item__text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -92,6 +94,7 @@
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

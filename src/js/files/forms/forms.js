@@ -11,7 +11,7 @@ import { gotoBlock } from "../scroll/gotoblock.js";
 Документація: https://template.fls.guru/template-docs/rabota-s-formami.html
 */
 
-// Робота із полями форми.
+// Работа с полями форм.
 export function formFieldsInit(options = { viewPass: false, autoHeight: false }) {
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
@@ -30,45 +30,45 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				targetElement.classList.remove('_form-focus');
 				targetElement.parentElement.classList.remove('_form-focus');
 			}
-			// Миттєва валідація
+			// Мгновенная валидация
 			targetElement.hasAttribute('data-validate') ? formValidate.validateInput(targetElement) : null;
 		}
 	});
 	// Якщо увімкнено, додаємо функціонал "Показати пароль"
-	if (options.viewPass) {
-		document.addEventListener("click", function (e) {
-			let targetElement = e.target;
-			if (targetElement.closest('[class*="__viewpass"]')) {
-				let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
-				targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
-				targetElement.classList.toggle('_viewpass-active');
-			}
-		});
-	}
+	// if (options.viewPass) {
+	// 	document.addEventListener("click", function (e) {
+	// 		let targetElement = e.target;
+	// 		if (targetElement.closest('[class*="__viewpass"]')) {
+	// 			let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
+	// 			targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
+	// 			targetElement.classList.toggle('_viewpass-active');
+	// 		}
+	// 	});
+	// }
 	// Якщо увімкнено, додаємо функціонал "Автовисота"
-	if (options.autoHeight) {
-		const textareas = document.querySelectorAll('textarea[data-autoheight]');
-		if (textareas.length) {
-			textareas.forEach(textarea => {
-				const startHeight = textarea.hasAttribute('data-autoheight-min') ?
-					Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
-				const maxHeight = textarea.hasAttribute('data-autoheight-max') ?
-					Number(textarea.dataset.autoheightMax) : Infinity;
-				setHeight(textarea, Math.min(startHeight, maxHeight))
-				textarea.addEventListener('input', () => {
-					if (textarea.scrollHeight > startHeight) {
-						textarea.style.height = `auto`;
-						setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
-					}
-				});
-			});
-			function setHeight(textarea, height) {
-				textarea.style.height = `${height}px`;
-			}
-		}
-	}
+	// if (options.autoHeight) {
+	// 	const textareas = document.querySelectorAll('textarea[data-autoheight]');
+	// 	if (textareas.length) {
+	// 		textareas.forEach(textarea => {
+	// 			const startHeight = textarea.hasAttribute('data-autoheight-min') ?
+	// 				Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
+	// 			const maxHeight = textarea.hasAttribute('data-autoheight-max') ?
+	// 				Number(textarea.dataset.autoheightMax) : Infinity;
+	// 			setHeight(textarea, Math.min(startHeight, maxHeight))
+	// 			textarea.addEventListener('input', () => {
+	// 				if (textarea.scrollHeight > startHeight) {
+	// 					textarea.style.height = `auto`;
+	// 					setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
+	// 				}
+	// 			});
+	// 		});
+	// 		function setHeight(textarea, height) {
+	// 			textarea.style.height = `${height}px`;
+	// 		}
+	// 	}
+	// }
 }
-// Валідація форм
+// Валидация форм
 export let formValidate = {
 	getErrors(form) {
 		let error = 0;
