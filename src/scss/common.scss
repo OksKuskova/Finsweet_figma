@@ -231,7 +231,7 @@
 }
 // Content-block ========================================================================
 .content-block {
-	p {
+	p, ul {
 		&:not(:last-child) {
 			margin-bottom: 16px;
 		}
