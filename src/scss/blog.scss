@@ -123,6 +123,7 @@
 			font-size: rem(20);
 			line-height: 1.333;
 			color: $mainColor;	
+			cursor: default;
 			@media (min-width:$mobile){
 				font-size: rem(24);			
 			}		

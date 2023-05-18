@@ -90,7 +90,7 @@
 	&__container {
 	}
 
-	&__content {
+	&__body {
 		position: relative;
 		z-index: 2;
 		max-width: 804px;
@@ -231,7 +231,7 @@
 
 	&__item {
 		display: block;
-		padding: 25px 25px 20px 25px;
+		padding: 20px 20px 10px 20px;
 		background-color: $white;
 		transition: background-color 0.3s ease 0s;
 		@media (min-width:$mobile) and (max-width:$tablet){
@@ -239,6 +239,9 @@
 		}		
 		&:hover {
 			background-color: $lightYellow;
+		}
+		@media (min-width:$mobile){
+			padding: 25px 25px 20px 25px;
 		}
 		@media (min-width:$tablet){
 			padding: 30px 30px 25px 30px;
@@ -649,7 +652,12 @@
 .swiper-pagination-bullet-active {
 	background-color: $black;
 }
-
+.swiper-button-disabled {
+	cursor: default;
+	line-height: 14px !important;	
+	background-color: $white !important;	
+	transform: scale(0.775, 0.775);
+}
 .reviews-button-prev, .reviews-button-next {
 	width: 62px;
 	height: 62px;	
@@ -666,9 +674,9 @@
 		content: url('@img/reviews/Arrow-left.svg');				
 	}			
 	&.swiper-button-disabled {
-		line-height: 14px;	
-		background-color: $white;	
-		transform: scale(0.775, 0.775);
+		// line-height: 14px;	
+		// background-color: $white;	
+		// transform: scale(0.775, 0.775);
 		&::after {
 			content: url('@img/reviews/Arrow-left_small.svg');	
 		}				
@@ -679,9 +687,9 @@
 		content: url('@img/reviews/Arrow-right.svg');	
 	}
 	&.swiper-button-disabled {
-		line-height: 14px;	
-		background-color: $white;	
-		transform: scale(0.775, 0.775);
+		// line-height: 14px;	
+		// background-color: $white;	
+		// transform: scale(0.775, 0.775);
 		&::after {
 			content: url('@img/reviews/Arrow-right_small.svg');	
 		}
