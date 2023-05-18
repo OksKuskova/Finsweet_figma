@@ -705,7 +705,8 @@ body::after {
   color: #EDC14A;
 }
 
-.content-block p:not(:last-child) {
+.content-block p:not(:last-child),
+.content-block ul:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -2302,7 +2303,8 @@ body::after {
     font-size: 1.5rem;
   }
 
-  .content-block p:not(:last-child) {
+  .content-block p:not(:last-child),
+  .content-block ul:not(:last-child) {
     margin-bottom: 24px;
   }
 
