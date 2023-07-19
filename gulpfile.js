@@ -61,9 +61,3 @@ export { deployZIP }
 
 // Виконання сценарію за замовчуванням
 gulp.task('default', development);
-
-
-
-
-
-

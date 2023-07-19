@@ -449,9 +449,15 @@
 	}
 
 	&__icon {
+		flex: 0 0 128px;
+		width: 128px;
 		border-radius: 50%;
 		overflow: hidden;
+		img {
+			max-width: 100%;
+		}
 	}
+	
 
 	&__text {
 		text-align: center;

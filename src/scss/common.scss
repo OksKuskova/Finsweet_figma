@@ -20,6 +20,10 @@
 	&:hover {
 		background-color: $hover;
 	}
+	&:focus {
+		outline: none;
+		background-color: $hover;
+	}
 }
 .action {
 	display: flex;
@@ -82,7 +86,9 @@
 		color: $white;		
 		font-weight: 400;		
 		line-height: 1.75;			
-		font-size: rem(16);						
+		font-size: rem(16);
+		position: relative;
+		z-index: 2;					
 		
 		&_open-menu {
 			@media (max-width:$mobile){
@@ -336,6 +342,14 @@
 	column-gap: 16px;
 
 	&__icon {
+		flex: 0 0 48px;
+		height: 48px;
+		border-radius: 50%;
+		overflow: hidden;
+		
+		img {
+			max-width: 100%;					
+		}
 	}
 
 	&__info {
